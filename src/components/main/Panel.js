@@ -1,46 +1,35 @@
-import React, {Component} from 'react';
-import SplitPane, {Pane} from 'react-split-pane';
+import React from 'react';
+import SplitPane from 'react-split-pane';
 import './Panel.css';
 import {ReflexContainer, ReflexElement, ReflexSplitter} from "react-reflex";
+import {Info} from "../info/Info";
+import {Left} from "../left/Left";
+import {Right} from "../right/Right";
+import {Footer} from "../footer/Footer";
 
 export const Panel = () => {
 
     return (
-
-
-                <SplitPane split="horizontal" minSize={50} defaultSize={50}>
-                    <Pane className='pane2'   >
-                        header
-                    </Pane>
-
-                        <SplitPane split="horizontal" minSize={0} defaultSize={100}>
-
-                            <Pane className='pane2'>
-                                <ReflexContainer orientation="vertical">
-                                    <ReflexElement>
-                                        <div>1111</div>
-                                    </ReflexElement>
-                                    <ReflexSplitter/>
-                                    <ReflexElement>
-                                        <div>2222</div>
-                                    </ReflexElement>
-                                    <ReflexSplitter/>
-                                    <ReflexElement>
-                                        <div>3333</div>
-                                    </ReflexElement>
-                                </ReflexContainer>
-                            </Pane>
-                            <Pane className='pane2'>
-                                <div>5555</div>
-                                <div>6666</div>
-                            </Pane>
-
-
-                        </SplitPane>
-
-                </SplitPane>
-
-
-
+        <SplitPane split="horizontal" minSize={50} maxSize={50} defaultSize={50}>
+            <div className='product'>
+                Product
+            </div>
+            <SplitPane split="horizontal" minSize={0} defaultSize='75%'>
+                <ReflexContainer orientation="vertical">
+                    <ReflexElement>
+                        <Left/>
+                    </ReflexElement>
+                    <ReflexSplitter/>
+                    <ReflexElement>
+                        <Info/>
+                    </ReflexElement>
+                    <ReflexSplitter/>
+                    <ReflexElement>
+                        <Right/>
+                    </ReflexElement>
+                </ReflexContainer>
+                <Footer/>
+            </SplitPane>
+        </SplitPane>
     )
 }

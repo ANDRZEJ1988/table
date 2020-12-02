@@ -1,0 +1,31 @@
+.right {
+    border: solid 1px black;
+    height: 99%;
+    background-color: rgba(30, 86, 218, 0.63);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.container {
+    margin: 15px;
+    background-color: #f6f6f6;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 92%;
+}
+
+.group {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.one, .btn {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.btn {
+    width: 100%;
+}

@@ -47,3 +47,12 @@
 .Resizer.disabled:hover {
     border-color: transparent;
 }
+.product{
+    background-color: rgba(30, 86, 218, 0.63);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    width: 100%;
+}
+
